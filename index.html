@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura no Hardware</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container principal do Menu -->
+    <div id="app-container" class="menu-container" id="menu-screen">
+        
+        <!-- Imagem do Título no canto esquerdo -->
+        <img src="assets/titulo_jogo.png" alt="Aventura no Hardware" class="titulo-imagem">
+
+        <!-- Coluna de Botões no lado direito -->
+        <div class="botoes-container">
+            <img src="assets/btn_comecar.png" alt="Começar" class="btn-jogo" onclick="iniciarJogo()">
+            <img src="assets/btn_tutorial.png" alt="Tutorial" class="btn-jogo" onclick="abrirTutorial()">
+            <img src="assets/btn_apoio.png" alt="Apoio Pedagógico" class="btn-jogo" onclick="abrirApoio()">
+            <img src="assets/btn_creditos.png" alt="Créditos" class="btn-jogo" onclick="abrirCreditos()">
+            <img src="assets/btn_sair.png" alt="Sair" class="btn-jogo" onclick="sairJogo()">
+            <button onclick="testarFase2()">TESTAR FASE 2</button>
+        </div>
+
+        <!-- Onde o Phaser será injetado depois -->
+      <div id="game-container"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

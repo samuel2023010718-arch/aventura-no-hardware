@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0b3468;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container que segura a imagem de fundo do menu */
+.menu-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Posicionamento da imagem do Título */
+.titulo-imagem {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    width: 32vw; /* Tamanho proporcional responsivo */
+    height: auto;
+    z-index: 10;
+}
+
+/* Container que empilha os botões no lado direito */
+.botoes-container {
+    position: absolute;
+    top: 12%;
+    right: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento vertical uniforme entre os botões */
+    align-items: flex-end;
+    z-index: 10;
+}
+
+/* Estilo individual para cada imagem de botão */
+.btn-jogo {
+    width: 260px; /* Largura padrão ideal para os botões */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Efeito de destaque ao passar o mouse (Hover) */
+.btn-jogo:hover {
+    transform: scale(1.06); /* Aumenta levemente */
+    filter: drop-shadow(0px 6px 10px rgba(59, 130, 246, 0.6)); /* Dá um brilho azulado */
+}
+
+/* Efeito quando clica */
+.btn-jogo:active {
+    transform: scale(0.97);
+}
+
+/* Container do Phaser */
+#game-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
